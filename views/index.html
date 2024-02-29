@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <style>
+      /* Styling for the background image */
+      body {
+          background-image: url('https://www.shutterstock.com/image-vector/cricket-stadium-line-drawing-illustration-260nw-2138953931.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          margin: 0; /* Remove default margin */
+          padding: 0; /* Remove default padding */
+          height: 100vh; /* Set height to 100% of the viewport height */
+      }
+
+      /* Styling for the search bar */
+      .search-bar {
+          position: relative; /* Set position to relative */
+          z-index: 1; /* Ensure the search bar is above the background image */
+          margin-top: 50px;
+          margin-bottom: 20px;
+      }
+
+      .input-group {
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+      }
+
+      .form-control {
+          border-radius: 20px;
+          padding: 10px 20px;
+          font-size: 16px;
+      }
+
+      .input-group-addon button {
+          border: none;
+          background-color: #007bff;
+          color: white;
+          border-radius: 20px;
+          padding: 10px 20px;
+          cursor: pointer;
+      }
+
+      /* Styling for the search results container */
+      #searchResults {
+          display: none;
+          width: 80%;
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #f0f0f0;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          margin-top: 20px;
+          font-size: 16px;
+          position: relative; /* Ensure the search results container is above the background image */
+          z-index: 1; /* Ensure the search results container is above the background image */
+      }
+  </style>
+</head>
+
+<body>
+    <div class="search-bar">
+        <div id="imaginary_container" class="input-group stylish-input-group">
+            <input type="text" class="form-control" id="searchInp" placeholder="Search">
+            <span class="input-group-addon">
+                <button type="button" onclick="auto_suggest()">Search</button>
+            </span>
+        </div>
+    </div>
+
+    <!-- Container to display search results -->
+    <div id="searchResults">
+        <div id="searchResultsContent"></div>
+    </div>
+
+ 
+    <script src="customJs/auto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel='stylesheet' href='https://bots.kore.ai/webclient/UI/dist/kore-ai-sdk.min.css'></link>
+<script src='https://bots.kore.ai/api/platform/websdkjs/3049b802c6dd4413901d2a01545979ac45e14f83e1dc4aef90730637a6f73e5fst36'></script>
+<script>KoreSDK.show(KoreSDK.chatConfig);</script>
+</body>
+
+</html>
